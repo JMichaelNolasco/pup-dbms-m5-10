@@ -97,20 +97,7 @@ class RegisterPage(webapp2.RequestHandler):
 
 class ThesisHandler(webapp2.RequestHandler):
     def get(self):
-    
-        # user = users.get_current_user()
-        # if user:   
-        #     url = users.create_logout_url('/login')         
-        #     template = JINJA_ENVIRONMENT.get_template('home.html')
-        #     url_linktext = 'Logout' + ' ' + users.get_current_user().email()  
-        # else:
-        #     url =  users.create_login_url('/home')
-        #     url_linktext =  'Login'         
-        # template_values = {
-        #     'user': user,
-        #     'url': url,
-        #     'url_linktext': url_linktext
-        # }
+   
         loggedin_user = users.get_current_user()
         if loggedin_user:
             user_key = ndb.Key('User', loggedin_user.user_id())
